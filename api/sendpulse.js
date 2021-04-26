@@ -443,11 +443,11 @@ function getEmailsFromBook(callback, id) {
  * @param id
  * @param emails
  */
-function addEmails(callback, id, emails) {
+function addEmails(callback, id, emails, options) {
     if ((id === undefined) || (emails === undefined) || (!emails.length)) {
         return callback(returnError('Empty email or book id'));
     }
-    var data = {emails: serialize(emails)};
+    var data = Object.assign(options, {emails: serialize(emails)});
     sendRequest('addressbooks/' + id + '/emails', 'POST', data, true, callback);
 }
 
