@@ -448,6 +448,7 @@ function addEmails(callback, id, emails, options) {
         return callback(returnError('Empty email or book id'));
     }
     var data = Object.assign(options, {emails: serialize(emails)});
+    console.log(data)
     sendRequest('addressbooks/' + id + '/emails', 'POST', data, true, callback);
 }
 
