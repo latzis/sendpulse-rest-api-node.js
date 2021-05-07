@@ -2,7 +2,7 @@
 
 export function activateSender(callback: any, senderEmail: any, code: any): any;
 
-export function addEmails(callback: any, id: any, emails: any): any;
+export function addEmails(callback: any, id: any, emails: any, options: any): any;
 
 export function addSender(callback: any, senderName: any, senderEmail: any): any;
 
