@@ -114,7 +114,7 @@ function init(user_id, secret, storage, callback) {
  */
 function sendRequest(path, method, data, useToken, callback) {
     var headers = {};
-    headers['Content-Type'] = 'application/json';
+    headers['Content-Type'] = 'application/json; charset=utf-8';
     headers['Content-Length'] = Buffer.byteLength(JSON.stringify(data));
 
     if (useToken && TOKEN.length) {
